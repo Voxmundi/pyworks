@@ -27,4 +27,30 @@ def os_works():
 
 # -----------------------ternary conndition -------------------
 
+def ternary():
+  codition = True
+  x = 1 if codition else 0 
+  print(x) 
+
+
+
+# -----------------------enumarate-------------------
+
+def enum():
+  names = ['yama', 'ama', 'tamam', 'kahs']
+
+  for i,j in enumerate(names,start=1):
+    print(i,j)
+
+
+enum()
+
+
+
+
+
+
+
+
+
 
