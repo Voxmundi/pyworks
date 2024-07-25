@@ -15,8 +15,16 @@ class Employee:
 
 
 
-print (dir(os))
+def os_works():
+  print (dir(os))
+
+  print(os.cpu_count())
+  print(os.getcwd())
+  print(os.listdir())
+  print(dir(os.path))
+  print(os.environ)
 
 
+# -----------------------ternary conndition -------------------
 
 
