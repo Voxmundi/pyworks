@@ -43,7 +43,7 @@ def enum():
     print(i,j)
 
 
-enum()
+# enum()
 
 
 
