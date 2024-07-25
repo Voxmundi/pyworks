@@ -38,12 +38,62 @@ def ternary():
 
 def enum():
   names = ['yama', 'ama', 'tamam', 'kahs']
+  heros = ['kolo', 'gobo', 'dobo']
 
   for i,j in enumerate(names,start=1):
     print(i,j)
 
 
 # enum()
+
+def zipped():
+  names = ['yama', 'ama', 'tamam', 'kahs']
+  heros = ['kolo', 'gobo', 'dobo']
+  for item in zip(names,heros):
+    print(item)
+
+
+# zipped()
+
+# -----------------------upack------------------
+
+def unpack():
+  a, b, *c, d = (1,3,3,4,5,6,6)
+
+  print (a)
+  print (b)
+  print (c)
+  print (d)
+
+
+# unpack()
+
+
+# ----------------------- getattr - setattr ------------------
+
+
+class Person:
+  pass
+
+person = Person()
+
+def getset():
+  person_info = {'first':'yaman', 'last':'ural'}
+
+  for key, value in person_info.items():
+   setattr(person, key, value)
+
+  for key in person_info.keys():
+    print(getattr(person,key))
+
+
+
+
+getset()
+
+
+
+
 
 
 
