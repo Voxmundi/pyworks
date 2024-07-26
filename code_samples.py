@@ -86,7 +86,7 @@ def getset():
   for key in person_info.keys():
     print(getattr(person,key))
 
-getset()
+# getset()
 
 
 
@@ -107,10 +107,26 @@ def legb():
   # be = 5 
   print(e)
 
-e =3 
-from math import e
+e = 3 
 
-legb()
+
+# legb()
+
+# ----------------------- Global ------------------
+
+
+x  = 10 
+
+def glob():
+  # global x
+  x = 20
+  print(x)
+
+glob()
+print(x)
+
+
+
 
 
 
