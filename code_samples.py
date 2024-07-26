@@ -122,8 +122,34 @@ def glob():
   x = 20
   print(x)
 
-glob()
-print(x)
+  global y
+  y = 100
+
+# glob()
+# print(x)
+# print(y)
+
+
+# -----------------------Memory Management------------------
+
+x = 300
+y = 200+100
+
+print(x is y)
+print(id(x), id(y))
+
+class Dog:
+
+  def __init__(self,name):
+    self.name = name
+
+
+
+buddy = Dog('buddy')
+
+print(buddy.__dict__)
+
+
 
 
 
