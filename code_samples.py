@@ -135,8 +135,8 @@ def glob():
 x = 300
 y = 200+100
 
-print(x is y)
-print(id(x), id(y))
+# print(x is y)
+# print(id(x), id(y))
 
 class Dog:
 
@@ -147,11 +147,48 @@ class Dog:
 
 buddy = Dog('buddy')
 
-print(buddy.__dict__)
+# print(buddy.__dict__)
 
 
 
 
+# -----------------------Is  and == ------------------
+
+c = 300
+a = 500
+b = 1000/2
+
+
+
+
+print(a is b)
+
+# a = {'name':'banana', 'color':'yelllow'}
+# b = {'name':'banana', 'color':'yelllow'}
+
+print(a == b)
+
+
+
+
+import config
+import  sys
+import  os
+
+
+print(os.__file__)
+
+
+print (config.config_version)
+
+# modules
+# monitoring
+# hash_info
+# meta_path
+# path
+# path_hooks
+# platform
+# version_info
 
 
 
