@@ -86,9 +86,36 @@ def getset():
   for key in person_info.keys():
     print(getattr(person,key))
 
-
-
 getset()
+
+
+
+
+
+# ----------------------- LEGB------------------
+l = 'Local Scope' 
+e = 'Enclosed Scope'
+g = 'Global Scope'
+b = 'Built in  scope'
+
+
+from math import e
+
+
+
+def legb():
+  # be = 5 
+  print(e)
+
+e =3 
+from math import e
+
+legb()
+
+
+
+
+
 
 
 
