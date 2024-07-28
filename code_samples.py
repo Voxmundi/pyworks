@@ -266,7 +266,18 @@ z.bark(3)
 
 
 
+"""
+1- Good Code should explin  what is it doing 
+2- bad code has rigidity: when you modify it, you need to modify tons of others.
+that code has dependensies.  Bad depdencies. System are  coupled. 
+3- good code is not coupling, o need to work with other related modules. Has minimum depencdeny
 
+
+
+
+
+
+"""
 
 
 
