@@ -161,12 +161,12 @@ b = 1000/2
 
 
 
-print(a is b)
+# print(a is b)
 
 # a = {'name':'banana', 'color':'yelllow'}
 # b = {'name':'banana', 'color':'yelllow'}
 
-print(a == b)
+# print(a == b)
 
 
 
@@ -176,19 +176,102 @@ import  sys
 import  os
 
 
-print(os.__file__)
+# print(os.__file__)
+# print (config.config_version)
+# help(os)
+
+# print (sys.path)
+sys.path.append('/Users/voxmundi/works/decision')
 
 
-print (config.config_version)
+# ----------------------- Solid ------------------
 
-# modules
-# monitoring
-# hash_info
-# meta_path
-# path
-# path_hooks
-# platform
-# version_info
+s = 'Single Resposibilty'
+o = 'Open Close Priciple'
+l = 'Liskov Substition principle'
+i = 'ınterface segregation'
+d = 'Dependency inversion'
+
+
+class Dog():
+
+  def __init__(self,name,age):
+    self.name = name
+    self.age = age
+
+  def speak (self):
+    print(f"Hi I am {self.name} ")
+
+  def talk(self):
+    print('Bark')
+
+
+
+class Cat(Dog):
+ 
+  def __init__(self,name,age,color):
+    super().__init__(name,age)
+    self.color = color
+
+  def talk(self):
+    print('meeow')
+
+
+
+
+y  = Cat('pisi','5','tekir')
+# x = Dog('as',5)
+# x.speak()
+
+# y.speak()
+# y.talk()
+
+
+class Bog:
+
+  dogs =[]
+  xc = 5 
+
+  def __init__(self,name):
+    self.name = name
+    self.dogs.append(self)
+
+
+  @classmethod
+  def num_dogs(cls):
+    return len(cls.dogs)
+
+
+  @staticmethod
+  def bark(n):
+    for _ in range(n):
+      print('bark')
+
+  def __str__(self):
+    return f'its {self.name}'
+
+
+
+
+z = Bog('zeet')
+print (Bog.num_dogs())
+
+print (z)
+
+
+
+z.bark(3) 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
