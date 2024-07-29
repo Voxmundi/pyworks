@@ -254,13 +254,13 @@ class Bog:
 
 
 z = Bog('zeet')
-print (Bog.num_dogs())
+# print (Bog.num_dogs())
 
-print (z)
+# print (z)
 
 
 
-z.bark(3) 
+# z.bark(3) 
 
 
 
@@ -273,11 +273,67 @@ that code has dependensies.  Bad depdencies. System are  coupled.
 3- good code is not coupling, o need to work with other related modules. Has minimum depencdeny
 
 
-
-
-
-
 """
+
+# ----------------------- Shallow Copy Deep Copy ------------------
+import copy
+
+def s_d_copy():
+  a = [1,2,3]
+  b = a 
+
+  print (id(a), id(b))
+
+  b.extend([5,6,7])
+  print(a)
+  print(b)
+  # both are changed 
+
+
+  a = [1,2,3]
+  b = a.copy()
+
+  b.extend([5,6,7])
+  print(a)
+  print(b)
+
+  # b changed a still same but tthis is not deep copy
+  # copy() listi deep copy  edeer ama içindeki elemanlar aynı  referansta kalır
+
+
+
+  print (id(a[0]), id(b[0])) #same memory  id
+
+  # deepcopy
+ 
+
+
+  a = [1,2,3,4,5,[6,7,8]]
+  b = copy.deepcopy(a)
+
+  # 2 diffrent id location  
+  print (id(a), id(b))
+
+  b[0]= 'hello'
+  print(a)
+  print(b)
+
+  print (id(a[0]), id(b[0])) #same memory  id
+
+
+class Pony:
+  def __init__(self,name):
+    self.name = name
+
+def s_d_classcopy():
+
+  p1 = Pony('vv')
+  p2 = copy.copy(p1)
+
+  print(id(p1),id(p2))
+
+
+s_d_classcopy()
 
 
 
