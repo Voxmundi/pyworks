@@ -417,7 +417,7 @@ def display_info(name,age):
 
 
 
-display_info('çiço',23)
+# display_info('çiço',23)
 
 
 
