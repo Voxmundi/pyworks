@@ -333,15 +333,91 @@ def s_d_classcopy():
   print(id(p1),id(p2))
 
 
-s_d_classcopy()
+# s_d_classcopy()
+
+
+# ----------------------- Decorator ------------------
+
+
+def deco_func(original):
+
+  def wrapper(*arg, **kwargs):
+    print('executed before {}'.format(original.__name__))
+    return original(*arg, **kwargs)
+  return wrapper
+
+
+class Decoratorclass:
+
+  def __init__(self,original):
+    self.original = original
+
+  def __call__(self, *args, **kwargs):
+    print('call executed before {}'.format(self.original.__name__))
+    return self.original(*args, **kwargs)
+
+
+
+@deco_func
+def display():
+  print('display func')
+
+
+# display()
+
+@Decoratorclass
+def get_info(name,age):
+  print(name,age)
+
+
+# get_info('yaman',30)
+
+
+
+import logging
+import time
+from functools import wraps
+
+
+def my_logger(original):
+  logging.basicConfig(filename=f'{original.__name__}.log', level = logging.INFO)
+
+  @wraps(original)
+  def wrapper(*args, **kwargs):
+    logging.info(
+      f'Ran with  args {args} and kwargs {kwargs}'
+      )
+    return original(*args, **kwargs)
+
+  return wrapper
+
+
+
+def my_timer(original):
+
+  @wraps(original)
+  def wrapper(*args, **kwargs):
+    t1 = time.time()
+    result = original(*args, **kwargs)
+    t2 = time.time()-t1
+    print(f'{original.__name__} ran in {t2} seconds')
+    return result 
+   
+
+  return wrapper
 
 
 
 
 
+@my_logger
+@my_timer
+def display_info(name,age):
+  print (name,age)
 
 
 
+display_info('çiço',23)
 
 
 
