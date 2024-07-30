@@ -173,10 +173,6 @@ class Empl():
 		self.first = first
 		self.last = last
 
-	
-
-
-		
 
 
 def oop6():

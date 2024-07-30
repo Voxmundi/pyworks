@@ -421,6 +421,46 @@ def display_info(name,age):
 
 
 
+# ----------------------- lambda ------------------
+
+def lambdax():
+  y = lambda x: x+1
+  z = lambda x,y: x*y 
+
+  print(y(2))
+  print(z(5,7))
+
+  alist = [1,2,3,4,5,6,7,8,9,10]
+
+  def fun1(num):
+    return num**2
+
+  squares = map(fun1, alist)
+  print(list(squares))
+
+  squares = map(lambda x: x**2, alist)
+  print(list(squares))
+
+  even = list(filter(lambda x: x % 2 == 0, alist))
+  even = list(filter(lambda x: x > 5, alist))
+  print(even)
+
+  blist  = [[1,'a','hello'],[3,'b','world'],[2,'c','ok']]
+  sorter = sorted(blist, key=lambda x: x[2])
+  print(sorter)
+
+  facy_comp = {x: (lambda x: x**2)(x) for x in range(5)}
+  print(facy_comp[2])
+
+
+
+
+
+lambdax()
+
+
+
+
 
 
 
