@@ -187,4 +187,44 @@ def oop6():
 
 
 
-oop6()
+# oop6()
+
+
+
+
+
+
+
+class Point:
+	
+	def __new__(cls, *args, **kwargs):
+		print ('1-new instace created')
+
+		return super().__new__(cls)
+
+	def __init__(self, x,y):
+		self.x = x
+		self.y = y
+
+		print('2-initilaze ok ')
+
+	def __str__(self) -> str:
+
+		return(f"Point({self.x},{self.y})")
+
+
+
+yam = Point(1,2)
+print(yam)
+
+yam.__new__(Point)
+
+
+
+
+
+
+
+
+
+
