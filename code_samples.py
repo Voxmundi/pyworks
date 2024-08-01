@@ -417,7 +417,7 @@ def display_info(name,age):
 
 
 
-display_info('çiço',23)
+# display_info('çiço',23)
 
 
 
@@ -452,17 +452,22 @@ def lambdax():
   facy_comp = {x: (lambda x: x**2)(x) for x in range(5)}
   print(facy_comp[2])
 
+# lambdax()
 
 
 
 
-lambdax()
+# ----------------------- Iterators  ------------------
 
 
+a = 'yaman'
 
-
-
-
+b = list(a)
+print (b)
+c = ''.join(b)
+print(c)
+d = c.split(a)
+print (d)
 
 
 
