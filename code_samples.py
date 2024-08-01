@@ -466,8 +466,7 @@ b = list(a)
 print (b)
 c = ''.join(b)
 print(c)
-d = c.split(a)
-print (d)
+
 
 
 
