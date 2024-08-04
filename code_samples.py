@@ -458,8 +458,6 @@ def lambdax():
 
 
 # ----------------------- Iterators  ------------------
-
-
 a = 'yaman'
 b = list(a)
 print (b)
