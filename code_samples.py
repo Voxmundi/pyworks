@@ -461,11 +461,20 @@ def lambdax():
 
 
 a = 'yaman'
-
 b = list(a)
 print (b)
 c = ''.join(b)
 print(c)
+
+
+
+
+
+
+
+
+
+
 
 
 
