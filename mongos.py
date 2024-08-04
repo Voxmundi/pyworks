@@ -23,9 +23,12 @@ post_2 = {"_id":4, "name":"yam", "score":1.9}
 post_3 = {"_id":5, "name":"yamany"}
 
 
-collection.insert_many([post_1,post_2,post_3])
+# collection.insert_many([post_1,post_2,post_3])
+result = collection.find({"name":'yaman'})
 
-print (collection)
+for item in result:
+    print(item["score"])
+
 
 
 
