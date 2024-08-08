@@ -457,12 +457,42 @@ def lambdax():
 
 
 
-# ----------------------- Iterators  ------------------
-a = 'yaman'
-b = list(a)
-print (b)
-c = ''.join(b)
-print(c)
+# ----------------------- Zip   ------------------
+
+
+def zipped():
+  x = [1,2,3,4,5]
+  z = [1,2,3,4,5]
+  print( x is z)
+  y = ['q','s','f','v']
+
+  print(list(zip(x,y)))
+
+
+
+# zipped()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
