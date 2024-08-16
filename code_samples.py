@@ -475,10 +475,65 @@ def zipped():
 
 
 
+import pickle
+import json 
+
+class Fruit:
+  def __init__(self, name, calories):
+    self.name = name
+    self.calories = calories
+  
+  def describe(self):
+    print (self.name, self.calories, sep=': ')
 
 
 
+fruit = Fruit('banana', 150)
+# fruit.describe()
 
+"""
+with open ('banana.json','w') as file:
+  data = {'name':fruit.name, 'calories':fruit.calories }
+  json.dump(data,file)
+
+
+with open ('banana.json', 'r') as file:
+  data = json.load(file)
+  print (data)
+
+
+with open('data.pickle', 'wb') as file:
+  pickle.dump(fruit,file)
+
+"""
+
+with open ("data.pickle", "rb") as file:
+  f = pickle.load(file)
+
+  # f.describe()
+
+import csv
+
+
+# with open ('new_names.csv', 'r') as file:
+#   csv_reader = csv.reader(file, delimiter='\t')
+#   next(csv_reader)
+#   for line in csv_reader:
+#     print(line)
+
+
+
+# with open ('names.csv', 'r') as file:
+#   csv_reader = csv.reader(file)
+#   next(csv_reader)
+
+#   with open ("new_names.csv", "w") as new_csv:
+#     csv_writer = csv.writer(new_csv, delimiter = '\t')
+
+#     for line in csv_reader:
+#       csv_writer.writerow(line)
+
+#       print(line)
 
 
 

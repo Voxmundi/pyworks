@@ -176,7 +176,7 @@ def fibo(num):
 			print(c)
 
 
-# fibo(10)
+fibo(10)
 
 
 

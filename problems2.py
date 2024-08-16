@@ -89,9 +89,82 @@ def twosum (numbers, target):
             return [l,r]
     return[]
 
-print(twosum(numbers, target))
+# print(twosum(numbers, target))
 
 
+
+# ---------------------- 3 sum ----------------------
+
+nums = [-1,0,1,2,-1,-4]
+
+def tsum(nums):
+    res = []
+    nums.sort()
+
+    for i,a in enumerate(nums):
+        if i > 0 and a == nums[i-1]:
+            continue
+        
+
+# ---------------------- Valid Paranthes ----------------------
+
+s = "{}()[]"
+def isval(s):
+    stack = []
+    closetoOpen = {')':'(', ']':'[','}':'{'}
+    for c in s:
+        if c in closetoOpen:
+            if stack and stack[-1] == closetoOpen[c]:
+                stack.pop()
+            else:
+                return False
+        
+        else:
+            stack.append(c) 
+
+
+# ---------------------- Binary search----------------------
+
+nums = [-1,0,3,5,9,12]
+
+def binser(nums, target):
+    l,r = 0,len(nums)-1
+
+    while l<=r:
+        m = (l+r)//2
+        if nums[m] > target:
+            r = m-1
+        elif nums[m] < target:
+            l = m+1
+        else: 
+            return m
+
+    return -1
+
+# print(binser(nums,9))
+
+import math
+piles = [3,6,7,11]
+h = 8 
+
+def mineat(piles,h):
+    l,r = 0, max(piles)
+    res = r
+    while l <= r:
+        k = (l+r)//2
+        hours = 0 
+        for p in piles:
+            hours += math.ceil(p/k)
+        
+        if hours <= h:
+            res = min(res,k)
+            r = k-1
+        else:
+            l = k+1
+    
+    return res
+
+print(mineat(piles,h))
 
 
 
