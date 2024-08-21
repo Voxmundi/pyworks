@@ -84,8 +84,7 @@ class Heatmodule(KıchenModule):
 
 class Toaster(Heatmodule):
     pass
-    
-    
+
 
 class Juicer(KıchenModule):
     pass
@@ -97,7 +96,7 @@ print(t.set_temparature(40))
 print(t.on())
 print(t.off())
 
-print(j.set_temparature(40))
+
 print(j.on())
 print(j.off())
 
